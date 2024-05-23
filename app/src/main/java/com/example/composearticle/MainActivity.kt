@@ -42,18 +42,22 @@ class MainActivity : ComponentActivity() {
 fun ArticleApp(modifier: Modifier = Modifier) {
     ArticleCard(
         image = painterResource(R.drawable.bg_compose_background),
-        title = "Jetpack Compose Tutorial"
+        title = "Jetpack Compose Tutorial",
+        shortDescription = "Jetpack Compose is a modern toolkit for building native Android UI. Compose simplifies and accelerates UI development on Android with less code, powerful tools, and intuitive Kotlin APIs."
     )
 }
 
 @Composable
-fun ArticleCard(image: Painter, title: String, modifier: Modifier = Modifier) {
+fun ArticleCard(image: Painter, title: String, shortDescription: String, modifier: Modifier = Modifier) {
     Column(modifier) {
         Image(painter = image, contentDescription = null)
         Text(
             modifier = Modifier.padding(16.dp),
             text = title,
             fontSize = 24.sp,
+        )
+        Text(
+            shortDescription
         )
     }
 }
