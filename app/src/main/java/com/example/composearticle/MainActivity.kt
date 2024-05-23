@@ -17,6 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.composearticle.ui.theme.ComposeArticleTheme
 
@@ -50,7 +51,9 @@ fun ArticleCard(image: Painter, title: String, modifier: Modifier = Modifier) {
     Column(modifier) {
         Image(painter = image, contentDescription = null)
         Text(
+            modifier = Modifier.padding(16.dp),
             text = title,
+            fontSize = 24.sp,
         )
     }
 }
