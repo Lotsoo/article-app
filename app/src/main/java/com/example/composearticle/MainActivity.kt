@@ -64,6 +64,8 @@ fun ArticleCard(image: Painter, title: String, shortDescription: String, longDes
             text = shortDescription
         )
         Text(
+            modifier = Modifier.padding(16.dp),
+            textAlign = TextAlign.Justify,
             text = longDescription
         )
     }
